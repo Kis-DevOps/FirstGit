@@ -1,0 +1,5 @@
+Hi kishore i have created new file cale "file1" in your repository called "firstgit"
+Git is one of the version control system and its distributed vcs
+where as svn is centraized version control system, if svn server goes down you it wont be possible to commint changes on your local repositroy.
+where as in git , if git goes down althought we can do commit in loca repository, once up git server then we can push code to github.
+thats the beauty of distributed version control server
