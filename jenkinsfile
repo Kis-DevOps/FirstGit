@@ -3,7 +3,7 @@ pipeline{
   stages{
     stage("Git Checkout"){
       steps{
-            git credentialsId: 'github', url: 'https://github.com/Kis-DevOps/FirstGit.git'
+            git credentialsId: 'github', url: 'https://github.com/kliakos/sparkjava-war-example.git'
            }
           }
      stage("Maven Build"){
