@@ -1,21 +1,8 @@
 pipeline{
   agent any
-  
-  tools{
-  maven '3.0'
-  jdk 'java 8'
-  
-  }
+
     stages{
-      stage("initialise"){
-	   steps{
-	   sh '''
-      echo "PATH = ${PATH}"
-      echo "M2_HOME = ${M2_HOME}"
-      ''' 
-	  }
-	}
-	stage("Git Checkout"){
+     stage("Git Checkout"){
       steps{
             checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/kliakos/sparkjava-war-example.git']]])
            }
