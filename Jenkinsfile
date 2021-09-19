@@ -8,8 +8,8 @@ pipeline{
   }
     stages{
       stage("initialise"){
-	    steps{
-	    sh '''
+	   steps{
+	   sh '''
       echo "PATH = ${PATH}"
       echo "M2_HOME = ${M2_HOME}"
       ''' 
@@ -17,7 +17,7 @@ pipeline{
 	}
 	stage("Git Checkout"){
       steps{
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Coveros/helloworld.git']]])
+            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/kliakos/sparkjava-war-example.git']]])
            }
           }
 	 stage("Build Project"){
@@ -27,16 +27,16 @@ pipeline{
 	}
 	
 	 stage("Artifactory Deploy"){
-	  steps{
-	  nexusArtifactUploader credentialsId: 'nexus', groupId: 'kishore', nexusUrl: '52.15.155.53:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'java', version: '2.$BUILD_NUMBER'
+	   steps{
+	    nexusArtifactUploader artifacts: [[artifactId: 'java-hello-world', classifier: '', file: 'target/sparkjava-hello-world-1.0.war', type: 'war']], credentialsId: 'nexus', groupId: 'kishore', nexusUrl: '52.15.155.53:8081/nexus', nexusVersion: 'nexus2', protocol: 'http', repository: 'java', version: '2.$BUILD_NUMBER'
 	  }
 	}
 	
 	 stage("DeployTomcat"){
 	  steps{
-	  deploy adapters: [tomcat7(credentialsId: 'TomCAT', path: '', url: 'http://3.142.45.243:8080')], contextPath: 'kisho', war: '**/*.war'
+	   deploy adapters: [tomcat7(credentialsId: 'TomCAT', path: '', url: 'http://3.142.45.243:8080')], contextPath: 'kisho', war: '**/*.war'
 	  }
-	 }
+	}
 	
   }
 
