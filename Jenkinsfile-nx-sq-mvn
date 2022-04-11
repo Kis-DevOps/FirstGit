@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Get GIT Code') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('QualitTest') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('SonarChecks') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+         stage('Nextus-Store') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
