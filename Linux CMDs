@@ -1,0 +1,109 @@
+clear
+    2  ip address
+    3  u
+    4  wu
+    5  clear
+    6  ip adress
+    7  clear
+    8  ip address
+    9  clear
+   10  ip address
+   11  clear
+   12  ip address
+   13  clear
+   14  ip address
+   15  reboot
+   16  clear
+   17  ip address
+   18  reboot
+   19  clear
+   20  dokcer ps
+   21  clear
+   22  docker ps
+   23  clear
+   24  kubectl get pods
+   25  kubectl get po -A
+   26  E0802 14:26:30.369229    1402 memcache.go:265] couldn't get current server API group list: Get "https://192.168.67.2:8443/ap
+   27  clear
+   28  clear
+   29  exit
+   30  clear
+   31  exit
+   32  clear
+   33  cd
+   34  clear
+   35  pwd
+   36  clear
+   37  ls
+   38  vi test.txt
+   39  cat test.txt
+   40  clear
+   41  grep test.txt indians
+   42  clear
+   43  grep hello test.txt
+   44  grep great test.txt -1
+   45  grep great test.txt
+   46  cat test.txt
+   47  grep he* test.txt -2
+   48  grep he* test.txt
+   49  grep he test.txt
+   50  grep test.txt -1
+   51  clear
+   52  grep -n hello test.txt
+   53  grep -2 great test.txt
+   54  grep -n great test.txt
+   55  clear
+   56  grep India test.txt
+   57  grep -v  India test.txt
+   58  grep -c great test.txt
+   59  clear
+   60  man grep
+   61  sort -r test.txt
+   62  cat test.txt
+   63  clear
+   64  sort man
+   65  man sort
+   66  clear
+   67  tail test.txt
+   68  tail -n 1 test.txt
+   69  clear
+   70  grep -n great test.txt
+   71  clear
+   72  ls -l
+   73  sudo chown root test.txt
+   74  ll
+   75  clear
+   76  ll -l
+   77  ls test.txt
+   78  ll test.txt
+   79  clear
+   80  cat test.txt
+   81  chmod 777 root test.txt
+   82  sudo chmod 777 test.txt
+   83  clear
+   84  ll test.txt
+   85  clear
+   86  lsof kish
+   87  clear
+   88  lsof
+   89  clear
+   90  man lsof
+   91  lsof -u kish
+   92  clear
+   93  lsof -u root
+   94  clear
+   95  lsof -u k
+   96  clear
+   97  ifconfig
+   98  sudo apt install net-tools
+   99  clear
+  100  ifconfig
+  101  docker --version
+  102  clear
+  103  jenkins
+  104  jenkins --version
+  105  clear
+  106  man ifconfig
+  107  ifconfig -s
+  108  clear
+  109  history
