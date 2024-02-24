@@ -5,3 +5,4 @@ top
 dh -h
 free
 w
+date
