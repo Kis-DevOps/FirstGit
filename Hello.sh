@@ -6,3 +6,4 @@ dh -h
 free
 w
 date
+who
